@@ -1,16 +1,19 @@
-<script>
-  function a() {
+<html>  
+ <head>  
+ <script language="javascript">  
+  function b() {
     if (f.n.value == "aHR0cDovLzhyNS5jbi81MVgxeQ==") {
-    document.getElementByID("v").innerHtml="<iframe src="//player.bilibili.com/player.html?aid=80433022&bvid=BV1GJ411x7h7&cid=137649199&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>"
+		document.getElementById("v").innerHTML='<iframe src="https://player.bilibili.com/player.html?aid=80433022&bvid=BV1GJ411x7h7&cid=137649199&page=1&autoplay=true" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>'
     } else {
-      document.getElementByID("v").innerHtml="错误的神秘链接"
+      document.getElementById("v").innerHTML="错误的神秘链接"
     }
+	return false;
     }
-</script>
-
-
-<form name="f">
+ </script>  
+ </head>  
+ <body>  
+  <form name="f">
   神秘链接: <input type="text" name="n"><br>
-  <input type="submit" value="提交" onclick="a()">
-</form>
-<p id="v"></p>
+  <input type="button" value="提交" onclick="javascript:b()"> 
+  <p id="v"></p>
+</html>
